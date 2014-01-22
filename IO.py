@@ -95,7 +95,8 @@ def put_line(string):
 def execute_IO(IO_action, return_unit=False):
     """
     Takes an IO instance and actually runs it.
-    Sort of analogous to unsafePerformIO, except not unsafe.
+    Sort of analogous to unsafePerformIO, except you actually do
+    have to use it because python won't do it for you.
     """
     if IO_action.IOtype == IO.FinalT:
         if return_unit:
