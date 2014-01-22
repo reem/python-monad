@@ -192,6 +192,9 @@ IO_main = (get_number >= (lambda n:
 
 def main():
     "Runs each set of examples."
+    # Ideally your main() consists of a single call of IO.execute_IO
+    # Since we are really running three programs, we are making three calls
+    # to IO.execute_IO. You could just chain them together with >>, though.
     IO.execute_IO(maybe_main)
     IO.execute_IO(either_main)
     IO.execute_IO(IO_main)
