@@ -2,7 +2,10 @@
 Jonathan Reem
 January 2014
 
-Examples of some of the basic Monads, such as Maybe and Either
+Examples of some of the basic Monads, such as Maybe and Either.
+
+Idea to use sqrt and log functions credit to:
+    http://en.wikibooks.org/wiki/Haskell/Understanding_monads/Maybe
 """
 # pylint: disable=C0103
 
@@ -57,6 +60,8 @@ def safe_log_then_sqrt(num):
     go back to the very first option, which is what we'd like to do, except
     using bind, which implements the correct composition rules for us, instead
     of plain function composition.
+
+    You could also write: safe_log_then_sqrt = safe_log |mcompl| sqrt
     """
     return safe_log(num) >= safe_sqrt
 
